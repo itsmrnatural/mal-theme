@@ -1,0 +1,127 @@
+/*  Brink V2.1.3 by Valerio Lyndon - Customized by itsmrnatural
+    Updated: 2025-03-17 09:22:45
+*/
+
+/* Import Core Logic - Replace this URL with your GitHub hosted file */
+@import url("https://raw.githubusercontent.com/itsmrnatural/mal-theme/refs/heads/main/brink-core-logic.min.css");
+
+/* Import Karla Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+/* Cover image imports */
+@import "https://malscraper.azurewebsites.net/covers/anime/mrnatural/presets/dataimagelinkafter";
+@import "https://malscraper.azurewebsites.net/covers/manga/mrnatural/presets/dataimagelinkafter";
+@import "https://shishiohub.github.io/Covers/dataimagelinkafter.css"; 
+
+/* =============================================
+   USER CONFIGURATION - CUSTOMIZE THESE VALUES
+   ============================================= */
+
+:root {
+    /* Image and background settings */
+    --imageBrightness: 100%;  /* Controls opacity of anime previews */
+    --bgDimness: 50%;         /* Controls opacity of the list table behind preview pics */
+
+    /* Feature toggles */
+    --toggleStats: hidden;           /* visible or hidden - Shows list statistics in footer */
+    --toggleStreaming: visible;      /* visible or hidden - Shows anime streaming button */
+    --toggleTopRatingGold: visible;  /* visible or hidden - Shows gold rating banners (10/10) */
+    --toggleTopRatingSilver: visible; /* visible or hidden - Shows silver rating banners (9/10) */
+    --toggleTopRatingBronze: hidden; /* visible or hidden - Shows bronze rating banners (8/10) */
+
+    /* Visual effects */
+    --bannerVignetteOpacity: 90%;    /* Banner vignette darkness (0-100%) */
+    --imageBrightnessHov: 50%;       /* Image brightness on hover (0-100%) */
+    --imageBlurHov: 2px;             /* Image blur on hover (in pixels) */
+    --imageFade: .95;                /* Image fade effect (0-1) */
+    --infoBGOpacity: 0%;             /* Background opacity for info sections (0-100%) */
+    --numberOpacity: 80%;            /* Opacity for number column text (0-100%) */
+    
+    /* Theme colors */
+    --bg: 240, 3%, 9%;          /* Main background */
+    --bgAlt: 240, 3%, 14%;      /* Alternative background */
+    --btn: 240, 3%, 16%;        /* Button background */
+    --btnAlt: 240, 3.5%, 21%;   /* Alternative button background */
+    --btnLight: 240, 100%, 94%, 4%; /* Light button overlay */
+    --btnAccent: 240, 17%, 34%; /* Button accent color */
+    --accent: 240, 75%, 77%;    /* Main accent color */
+    
+    /* Text colors */
+    --text: 0, 0%, 100%;         /* Main text color */
+    --textProminent: 27, 87%, 67%; /* Prominent text */
+    --textLinkHov: 240, 50%, 80%; /* Link hover color */
+    
+    /* Status colors */
+    --current: 35, 49%, 46%;    /* Current/Watching color */
+    --completed: 324, 49%, 46%; /* Completed color */
+    --paused: 80, 91%, 23%;     /* On Hold color */
+    --dropped: 6, 44%, 46%;     /* Dropped color */
+    --planned: 56, 18%, 56%;    /* Plan to Watch color */
+    
+    /* Rating badge colors */
+    --goldRating: 32.5, 100%, 71%;   /* 10/10 rating */
+    --silverRating: 0, 0%, 80%;      /* 9/10 rating */
+    --bronzeRating: 25, 55%, 59%;    /* 8/10 rating */
+}
+
+/* Banner Background Image */
+body.ownlist {
+    background-color: #232325 !important;
+    background-image: url(https://image.myanimelist.net/ui/yCHrxjyj0lwjmGEXjAnOyPexfjm4-1REzgouEYXk-cY);
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+/* Distance of List table from top */
+#list-container {
+    margin-top: 500px;  
+}
+
+/* Header color and opacity */
+.header {
+    background: rgba(50, 50, 50, 0.5) !important;
+}
+
+/* List Table Color and Wallpaper */
+.list-block {
+    background-color: #161618 !important;
+    background-image: url() !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+/* Footer Color and Background */
+#footer-block {
+    background-color: #161618 !important;
+    height: 76px;
+    padding: 38px 0;
+    background-image: url(https://image.myanimelist.net/ui/uqwkn3zl0fMrMuaC28cB8Q) !important;
+}
+
+/* Status colors for list items */
+.data.watching ~ .title,
+.data.reading ~ .title {
+    background-color: #2C9A34; /* Example: #2C9A34 for current */
+} 
+
+.data.completed ~ .title {
+    background-color: #26448F; /* Example: #26448F for completed */
+} 
+
+.data.onhold ~ .title {
+    background-color: #BC9304; /* Example: #BC9304 for on-hold */
+} 
+
+.data.dropped ~ .title {
+    background-color: #792123; /* Example: #792123 for dropped */
+} 
+
+.data.plantowatch ~ .title,
+.data.plantoread ~ .title {
+    background-color: #939393; /* Example: #939393 for planned */
+}
+
+/* Any custom overrides can go below this line */
